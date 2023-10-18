@@ -8,4 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Profesores extends Model
 {
     use HasFactory;
+    public $timestamps = false;
+    protected $fillable = [
+        'documento',
+        'nombre',
+        'telefono',
+        'email',
+        'direccion',
+        'ciudad'
+    ];
 }

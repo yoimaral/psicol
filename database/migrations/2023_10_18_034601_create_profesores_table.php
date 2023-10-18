@@ -15,12 +15,12 @@ return new class extends Migration
     {
         Schema::create('profesores', function (Blueprint $table) {
             $table->id();
-            $table->Integer("Documento", 10);
-            $table->String("Nombre");
-            $table->Integer("Teléfono");
-            $table->String("Email");
-            $table->String("Dirección");
-            $table->String("Ciudad");
+            $table->Integer("documento")->unique();
+            $table->String("nombre");
+            $table->String("telefono");
+            $table->String("email")->unique();
+            $table->string("direccion");
+            $table->String("ciudad");
             $table->timestamps();
         });
     }
