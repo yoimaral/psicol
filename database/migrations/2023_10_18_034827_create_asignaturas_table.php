@@ -15,6 +15,10 @@ return new class extends Migration
     {
         Schema::create('asignaturas', function (Blueprint $table) {
             $table->id();
+            $table->String("nombre");
+            $table->String("descripcion");
+            $table->String("credito");
+            $table->String("area");
             $table->timestamps();
         });
     }
